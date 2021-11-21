@@ -31,6 +31,8 @@ This is important for the 21:9 package because the various 21:9 aspect ratios (2
 
 If the Aspect Ratio change doesn't work (i.e. you still have black bars in-game), try renaming the `SH9/Binaries/Win64/dsound.dll` to another dll name marked as supporting `x64` on [this list](https://github.com/ThirteenAG/Ultimate-ASI-Loader#description)
 
+If you get an error such as "Unable to load SUWSF.asi. Error:126", ensure you have the latest [64bit VC Redist installed](https://aka.ms/vs/17/release/vc_redist.x64.exe), alternatively use the [VisualCppRedist AIO](https://github.com/abbodi1406/vcredist) package which includes all versions of VC redist.
+
 ## Credits
 
 - Thanks to [@RoseTheFlower](https://github.com/RoseTheFlower/) for helping me with the FOV calculations!
