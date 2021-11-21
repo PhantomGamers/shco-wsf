@@ -4,6 +4,14 @@
 
 ## Screenshots
 
+Before:
+![SHCO_x17mB7l9un](https://user-images.githubusercontent.com/844685/142747093-f8f7ab0c-aa54-431c-83fe-2cb4c759266f.jpg)
+
+
+After:
+![SHCO_Aa6mdOHBgc](https://user-images.githubusercontent.com/844685/142747094-bb0041f0-fba2-4212-90d3-24246903cd5d.jpg)
+
+
 ## Install
 
 To install, download the [latest release](https://github.com/PhantomGamers/shco-wsf/releases/latest) with your desired aspect ratio (SHCO-AR-VERSION.zip) and extract the contents of the zip so that the SH9 folder in the zip file gets merged with the SH9 folder in your Sherlock Holmes Chapter One installation folder.
