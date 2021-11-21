@@ -1,6 +1,9 @@
 # shco-wsf
 
- Widescreen fix for Sherlock Holmes Chapter One
+ Widescreen fix for Sherlock Holmes Chapter One  
+
+Removes in-game black bars and increases FOV to compensate.  
+Does **NOT** remove black bars in cutscenes.  
 
 ## Screenshots
 
@@ -24,6 +27,12 @@ You can edit the `SH9/Binaries/Win64/SUWSF.ini` file with your target resolution
 
 This is important for the 21:9 package because the various 21:9 aspect ratios (2560x1080, 3440x1440, and 3840x1600) are all slightly different. By default the 21:9 package comes configured for 3440x1440.
 
+## Troubleshooting
+
+If the Aspect Ratio change doesn't work (i.e. you still have black bars in-game), try renaming the `SH9/Binaries/Win64/dsound.dll` to another dll name marked as supporting `x64` on [this list](https://github.com/ThirteenAG/Ultimate-ASI-Loader#description)
+
 ## Credits
 
 - Thanks to [@RoseTheFlower](https://github.com/RoseTheFlower/) for helping me with the FOV calculations!
+- [@DarthTon](https://github.com/DarthTon) for the Windows memory hacking library [Blackbone](https://github.com/DarthTon/Blackbone)
+- [@ThirteenAG](https://github.com/ThirteenAG) for [IniReader](https://github.com/ThirteenAG/IniReader) and [UltimateASILoader](https://github.com/ThirteenAG/Ultimate-ASI-Loader)
