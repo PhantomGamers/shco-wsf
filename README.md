@@ -5,6 +5,17 @@
 Removes in-game black bars and increases FOV to compensate.  
 Does **NOT** remove black bars in cutscenes.  
 
+## Table of Contents
+
+- [shco-wsf](#shco-wsf)
+  * [Screenshots](#screenshots)
+  * [Install](#install)
+  * [Configuration](#configuration)
+  * [Troubleshooting](#troubleshooting)
+  * [Credits](#credits)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 ## Screenshots
 
 Before:
