@@ -31,6 +31,7 @@ After:
 1. **Ensure you have the latest [64-bit Microsoft Visual C++ Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe) installed.**
 2. Download the [latest release](https://github.com/PhantomGamers/shco-wsf/releases/latest) with your desired aspect ratio (SHCO-AR-VERSION.zip)
 3. Extract the contents of the zip so that the SH9 folder in the zip file gets merged with the SH9 folder in your Sherlock Holmes Chapter One installation folder.
+4. *(Optional, recommended for 21:9)* Edit `SH9/Binaries/Win64/SUWSF.ini` and set `DesiredResolution=` to your monitor's resolution.
 
 ## Configuration
 
@@ -42,9 +43,9 @@ This is important for the 21:9 package because the various 21:9 aspect ratios (2
 
 ## Troubleshooting
 
-If the Aspect Ratio change doesn't work (i.e. you still have black bars in-game), try renaming the `SH9/Binaries/Win64/dsound.dll` to another dll name marked as supporting `x64` on [this list](https://github.com/ThirteenAG/Ultimate-ASI-Loader#description)
-
 If you get an error such as "Unable to load SUWSF.asi. Error:126", ensure you have the latest [64bit VC Redist installed](https://aka.ms/vs/17/release/vc_redist.x64.exe), alternatively use the [VisualCppRedist AIO](https://github.com/abbodi1406/vcredist) package which includes all versions of VC redist.
+
+If the Aspect Ratio change doesn't work (i.e. you still have black bars in-game), try renaming the `SH9/Binaries/Win64/dsound.dll` to another dll name marked as supporting `x64` on [this list](https://github.com/ThirteenAG/Ultimate-ASI-Loader#description)
 
 ## Credits
 
