@@ -29,7 +29,7 @@ After:
 ## Install
 
 1. **Ensure you have the latest [64-bit Microsoft Visual C++ Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe) installed.**
-2. Download the [latest release](https://github.com/PhantomGamers/shco-wsf/releases/latest) with your desired aspect ratio (SHCO-AR-VERSION.zip)
+2. Download the [latest release](https://github.com/PhantomGamers/shco-wsf/releases/latest) with your desired aspect ratio (SHCO-WSF-AR-VERSION.zip)
 3. Extract the contents of the zip so that the SH9 folder in the zip file gets merged with the SH9 folder in your Sherlock Holmes Chapter One installation folder.
 4. *(Optional, recommended for 21:9)* Edit `SH9/Binaries/Win64/SUWSF.ini` and set `DesiredResolution=` to your monitor's resolution.
 
