@@ -35,7 +35,7 @@ After:
 
 ## Configuration
 
-This fix is based off of version 1.1.0 of my [Somewhat Universal Widescreen Fix](https://github.com/phantomgamers/suwsf).
+This fix is based off of version 1.2.0 of my [Somewhat Universal Widescreen Fix](https://github.com/phantomgamers/suwsf).
 
 You can edit the `SH9/Binaries/Win64/SUWSF.ini` file with your target resolution to change the AR that is set.
 
