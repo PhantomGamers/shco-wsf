@@ -40,6 +40,7 @@ jobs:
         mkdir -p SH9/Content/Paks/~mods
         mkdir -p SH9/Binaries/Win64
         unzip SUWSF.zip -d SH9/Binaries/Win64
+        mv SH9/Binaries/Win64/*.dll SH9/Binaries/Win64/dsound.dll
         cp ${{ matrix.ar }}/SUWSF.ini SH9/Binaries/Win64
         cp ${{ matrix.ar }}/666-FOVFix.pak SH9/Content/Paks/~mods
         zip -r "SHCO-WSF-${{ matrix.ar }}-${{ github.ref_name }}.zip" SH9
