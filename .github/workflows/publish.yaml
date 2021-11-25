@@ -9,6 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
+      max-parallel: 1
       matrix:
         ar: ['21x9', '32x9', '48x9']
     steps:
