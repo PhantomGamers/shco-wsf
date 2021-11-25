@@ -1,0 +1,54 @@
+name: Publish
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build:
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        ar: ['21x9', '32x9', '48x9']
+    steps:
+    - name: Check Tag
+      id: check-tag
+      uses: actions-ecosystem/action-regex-match@v2
+      with:
+        text: ${{ github.ref_name }}
+        regex: '^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$'
+    - name: Fail if invalid
+      if: steps.check-tag.outputs.match == ''
+      uses: Actions/github-script@v3
+      with:
+        script: |
+          core.setFailed('Invalid tag')
+
+    - uses: actions/checkout@v2
+    - name: Download SUWSF
+      uses: dsaltares/fetch-gh-release-asset@master
+      id: SUWSF
+      with:
+        repo: "PhantomGamers/SUWSF"
+        file: "SUWSF.zip"
+        target: "SUWSF.zip"
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Prepare release
+      run: |
+        7z e SUWSF.zip -oSH9/Binaries/Win64/
+        copy ${{ matrix.ar }}/SUWSF.ini SH9/Binaries/Win64
+        mkdir SH9/Content/Paks/~mods
+        copy ${{ matrix.ar }}/666-FOVFix.pak SH9/Content/Paks/~mods
+        7z a -tzip "SHCO-WSF-${{ matrix.ar }}-${{ github.ref_name }}.zip" SH9/
+    
+    - name: Create release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: "SHCO-WSF-${{ matrix.ar }}-${{ github.ref_name }}.zip"
+        draft: true
+
+
+        
+    
