@@ -45,10 +45,12 @@ jobs:
         zip -r "SHCO-WSF-${{ matrix.ar }}-${{ github.ref_name }}.zip" SH9
     
     - name: Create release
-      uses: softprops/action-gh-release@v1
+      uses: ncipollo/release-action@v1
       with:
-        files: "SHCO-WSF-${{ matrix.ar }}-${{ github.ref_name }}.zip"
+        artifacts: "SHCO-WSF-${{ matrix.ar }}-${{ github.ref_name }}.zip"
         draft: true
+        allowUpdates: true
+        token: ${{ secrets.GITHUB_TOKEN }}
 
 
         
