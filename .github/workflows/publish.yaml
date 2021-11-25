@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         ar: ['21x9', '32x9', '48x9']
@@ -37,11 +37,12 @@ jobs:
     
     - name: Prepare release
       run: |
-        7z e SUWSF.zip -oSH9/Binaries/Win64/
-        copy ${{ matrix.ar }}/SUWSF.ini SH9/Binaries/Win64
-        mkdir SH9/Content/Paks/~mods
-        copy ${{ matrix.ar }}/666-FOVFix.pak SH9/Content/Paks/~mods
-        7z a -tzip "SHCO-WSF-${{ matrix.ar }}-${{ github.ref_name }}.zip" SH9/
+        mkdir -p SH9/Content/Paks/~mods
+        mkdir -p SH9/Binaries/Win64
+        unzip SUWSF.zip -d SH9/Binaries/Win64
+        cp ${{ matrix.ar }}/SUWSF.ini SH9/Binaries/Win64
+        cp ${{ matrix.ar }}/666-FOVFix.pak SH9/Content/Paks/~mods
+        zip -r "SHCO-WSF-${{ matrix.ar }}-${{ github.ref_name }}.zip" SH9
     
     - name: Create release
       uses: softprops/action-gh-release@v1
