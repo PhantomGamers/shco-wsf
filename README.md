@@ -3,7 +3,7 @@
  Widescreen fix for Sherlock Holmes Chapter One  
 
 Removes in-game black bars and increases FOV to compensate.  
-Does **NOT** remove black bars in cutscenes.  
+Does **NOT** remove black bars in cutscenes. [Rose's patcher for The Sinking City](https://community.pcgamingwiki.com/files/file/1329-the-sinking-city-ultrawide-and-multimonitor-mod/) can remove the black bars in cutscenes!
 
 ## Table of Contents
 
