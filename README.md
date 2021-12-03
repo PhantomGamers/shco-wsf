@@ -32,6 +32,7 @@ After:
 2. Download the [latest release](https://github.com/PhantomGamers/shco-wsf/releases/latest) with your desired aspect ratio (SHCO-WSF-AR-VERSION.zip)
 3. Extract the contents of the zip so that the SH9 folder in the zip file gets merged with the SH9 folder in your Sherlock Holmes Chapter One installation folder.
 4. *(Optional, recommended for 21:9)* Edit `SH9/Binaries/Win64/SUWSF.ini` and set `DesiredResolution=` to your monitor's resolution.
+5. (Optional) Use [Rose's patcher for The Sinking City](https://community.pcgamingwiki.com/files/file/1329-the-sinking-city-ultrawide-and-multimonitor-mod/) alongside this fix to remove black bars in dialogue and in-game cutscenes
 
 ## Configuration
 
