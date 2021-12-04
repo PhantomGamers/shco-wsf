@@ -5,6 +5,8 @@
 Removes in-game black bars and increases FOV to compensate.  
 Does **NOT** remove black bars in cutscenes. [Rose's patcher for The Sinking City](https://community.pcgamingwiki.com/files/file/1329-the-sinking-city-ultrawide-and-multimonitor-mod/) can remove the black bars in cutscenes!
 
+[Rose also has a trainer that fixes everything](https://github.com/RoseTheFlower/SherlockHolmesCOUltrawide) if you don't mind having to launch it each time you play the game!
+
 ## Table of Contents
 
 - [shco-wsf](#shco-wsf)
