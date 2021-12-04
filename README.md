@@ -2,10 +2,10 @@
 
  Widescreen fix for Sherlock Holmes Chapter One  
 
-Removes in-game black bars and increases FOV to compensate.  
-Does **NOT** remove black bars in cutscenes. [Rose's patcher for The Sinking City](https://community.pcgamingwiki.com/files/file/1329-the-sinking-city-ultrawide-and-multimonitor-mod/) can remove the black bars in cutscenes!
+Removes in-engine black bars and increases FOV to compensate.  
+FOV in in-engine cutscenes and dialogue is still vert-
 
-[Rose also has a trainer that fixes everything](https://github.com/RoseTheFlower/SherlockHolmesCOUltrawide) if you don't mind having to launch it each time you play the game!
+[Rose also has a trainer that fixes everything including FOV in in-engine cutscenes](https://github.com/RoseTheFlower/SherlockHolmesCOUltrawide) if you don't mind having to launch it each time you play the game!
 
 ## Table of Contents
 
@@ -33,25 +33,24 @@ After:
 1. **Ensure you have the latest [64-bit Microsoft Visual C++ Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe) installed.**
 2. Download the [latest release](https://github.com/PhantomGamers/shco-wsf/releases/latest) with your desired aspect ratio (SHCO-WSF-AR-VERSION.zip)
 3. Extract the contents of the zip so that the SH9 folder in the zip file gets merged with the SH9 folder in your Sherlock Holmes Chapter One installation folder.
-4. *(Optional, recommended for 21:9)* Edit `SH9/Binaries/Win64/SUWSF.ini` and set `DesiredResolution=` to your monitor's resolution.
-5. (Optional) Use [Rose's patcher for The Sinking City](https://community.pcgamingwiki.com/files/file/1329-the-sinking-city-ultrawide-and-multimonitor-mod/) alongside this fix to remove black bars in dialogue and in-game cutscenes
+4. *(Optional)* Edit `SH9/Binaries/Win64/SUWSF.ini` and set `Resolution=` to your monitor's resolution. This is only necessary if autodetection does not work for you.
 
 ## Configuration
 
-This fix is based off of version 1.2.0 of my [Somewhat Universal Widescreen Fix](https://github.com/phantomgamers/suwsf).
+This fix is based off of version 2.0 of my [Somewhat Universal Widescreen Fix](https://github.com/phantomgamers/suwsf).
 
-You can edit the `SH9/Binaries/Win64/SUWSF.ini` file with your target resolution to change the AR that is set.
-
-This is important for the 21:9 package because the various 21:9 aspect ratios (2560x1080, 3440x1440, and 3840x1600) are all slightly different. By default the 21:9 package comes configured for 3440x1440.
+You can edit the `SH9/Binaries/Win64/SUWSF.ini` file with your resolution if autodetection does not work for you.
 
 ## Troubleshooting
 
-If you get an error such as "Unable to load SUWSF.asi. Error:126", ensure you have the latest [64bit VC Redist installed](https://aka.ms/vs/17/release/vc_redist.x64.exe), alternatively use the [VisualCppRedist AIO](https://github.com/abbodi1406/vcredist) package which includes all versions of VC redist.
+If you get an error such as "Unable to load SUWSF.asi. Error:126", ensure you have the latest [64bit VC Redist installed](https://aka.ms/vs/17/release/vc_redist.x64.exe).
 
 If the Aspect Ratio change doesn't work (i.e. you still have black bars in-game), try renaming the `SH9/Binaries/Win64/dsound.dll` to another dll name marked as supporting `x64` on [this list](https://github.com/ThirteenAG/Ultimate-ASI-Loader#description)
 
 ## Credits
 
 - Thanks to [@RoseTheFlower](https://github.com/RoseTheFlower/) for helping me with the FOV calculations!
-- [@DarthTon](https://github.com/DarthTon) for the Windows memory hacking library [Blackbone](https://github.com/DarthTon/Blackbone)
-- [@ThirteenAG](https://github.com/ThirteenAG) for [IniReader](https://github.com/ThirteenAG/IniReader) and [UltimateASILoader](https://github.com/ThirteenAG/Ultimate-ASI-Loader)
+- Thanks to killer-m from WSGF discord for the pillarboxing pattern!
+- [@ThirteenAG](https://github.com/ThirteenAG) for [Hooking.Patterns](https://github.com/ThirteenAG/Hooking.Patterns), [IniReader](https://github.com/ThirteenAG/IniReader) and [UltimateASILoader](https://github.com/ThirteenAG/Ultimate-ASI-Loader)
+- [@sergey-shandar](https://github.com/sergey-shandar) for [getboost](https://github.com/sergey-shandar/getboost)
+- [@codeplea](https://github.com/codeplea) for [tinyexpr](https://github.com/codeplea/tinyexpr)

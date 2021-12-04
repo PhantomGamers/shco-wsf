@@ -32,17 +32,17 @@ jobs:
       id: SUWSF
       with:
         repo: "PhantomGamers/SUWSF"
-        file: "SUWSF.zip"
-        target: "SUWSF.zip"
+        file: "SUWSF-x64.zip"
+        target: "SUWSF-x64.zip"
         token: ${{ secrets.GITHUB_TOKEN }}
     
     - name: Prepare release
       run: |
         mkdir -p SH9/Content/Paks/~mods
         mkdir -p SH9/Binaries/Win64
-        unzip SUWSF.zip -d SH9/Binaries/Win64
+        unzip SUWSF-x64.zip -d SH9/Binaries/Win64
         mv SH9/Binaries/Win64/*.dll SH9/Binaries/Win64/dsound.dll || true
-        cp ${{ matrix.ar }}/SUWSF.ini SH9/Binaries/Win64
+        cp SUWSF.ini SH9/Binaries/Win64
         cp ${{ matrix.ar }}/666-FOVFix.pak SH9/Content/Paks/~mods
         zip -r "SHCO-WSF-${{ matrix.ar }}-${{ github.ref_name }}.zip" SH9
     
