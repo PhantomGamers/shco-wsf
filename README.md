@@ -2,10 +2,9 @@
 
  Widescreen fix for Sherlock Holmes Chapter One  
 
-Removes in-engine black bars and increases FOV to compensate.  
-FOV in in-engine cutscenes and dialogue is still vert-
+Removes in-engine black bars and switches FOV to hor+
 
-[Rose also has a trainer that fixes everything including FOV in in-engine cutscenes](https://github.com/RoseTheFlower/SherlockHolmesCOUltrawide) if you don't mind having to launch it each time you play the game!
+[Rose also has a trainer that offers more control over the FOV](https://github.com/RoseTheFlower/SherlockHolmesCOUltrawide)
 
 ## Table of Contents
 
@@ -23,15 +22,13 @@ FOV in in-engine cutscenes and dialogue is still vert-
 Before:
 ![SHCO_x17mB7l9un](https://user-images.githubusercontent.com/844685/142747093-f8f7ab0c-aa54-431c-83fe-2cb4c759266f.jpg)
 
-
 After:
 ![SHCO_Aa6mdOHBgc](https://user-images.githubusercontent.com/844685/142747094-bb0041f0-fba2-4212-90d3-24246903cd5d.jpg)
-
 
 ## Install
 
 1. **Ensure you have the latest [64-bit Microsoft Visual C++ Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe) installed.**
-2. Download the [latest release](https://github.com/PhantomGamers/shco-wsf/releases/latest) with your desired aspect ratio (SHCO-WSF-AR-VERSION.zip)
+2. Download the [latest release](https://github.com/PhantomGamers/shco-wsf/releases/latest/download/SHCO-WSF.zip)
 3. Extract the contents of the zip so that the SH9 folder in the zip file gets merged with the SH9 folder in your Sherlock Holmes Chapter One installation folder.
 4. *(Optional)* Edit `SH9/Binaries/Win64/SUWSF.ini` and set `Resolution=` to your monitor's resolution. This is only necessary if autodetection does not work for you.
 
@@ -49,8 +46,8 @@ If the Aspect Ratio change doesn't work (i.e. you still have black bars in-game)
 
 ## Credits
 
-- Thanks to [@RoseTheFlower](https://github.com/RoseTheFlower/) for helping me with the FOV calculations!
-- Thanks to killer-m from WSGF discord for the pillarboxing pattern!
+- Thanks to killer-m from WSGF discord for the dialogue pillarboxing and better FOV fix!
+- Thanks to [@RoseTheFlower](https://github.com/RoseTheFlower/) for helping me with the FOV calculations for v1!
 - [@ThirteenAG](https://github.com/ThirteenAG) for [Hooking.Patterns](https://github.com/ThirteenAG/Hooking.Patterns), [IniReader](https://github.com/ThirteenAG/IniReader) and [UltimateASILoader](https://github.com/ThirteenAG/Ultimate-ASI-Loader)
 - [@sergey-shandar](https://github.com/sergey-shandar) for [getboost](https://github.com/sergey-shandar/getboost)
 - [@codeplea](https://github.com/codeplea) for [tinyexpr](https://github.com/codeplea/tinyexpr)

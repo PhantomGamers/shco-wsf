@@ -8,10 +8,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      max-parallel: 1
-      matrix:
-        ar: ['21x9', '32x9', '48x9']
     steps:
     - name: Check Tag
       id: check-tag
@@ -38,18 +34,16 @@ jobs:
     
     - name: Prepare release
       run: |
-        mkdir -p SH9/Content/Paks/~mods
         mkdir -p SH9/Binaries/Win64
         unzip SUWSF-x64.zip -d SH9/Binaries/Win64
         mv SH9/Binaries/Win64/*.dll SH9/Binaries/Win64/dsound.dll || true
         cp SUWSF.ini SH9/Binaries/Win64
-        cp ${{ matrix.ar }}/666-FOVFix.pak SH9/Content/Paks/~mods
-        zip -r "SHCO-WSF-${{ matrix.ar }}-${{ github.ref_name }}.zip" SH9
+        zip -r "SHCO-WSF.zip" SH9
     
     - name: Create release
       uses: ncipollo/release-action@v1
       with:
-        artifacts: "SHCO-WSF-${{ matrix.ar }}-${{ github.ref_name }}.zip"
+        artifacts: "SHCO-WSF.zip"
         draft: true
         allowUpdates: true
         token: ${{ secrets.GITHUB_TOKEN }}
